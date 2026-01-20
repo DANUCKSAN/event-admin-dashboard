@@ -1,177 +1,45 @@
-/* =========================
-   Header Base
-========================= */
 .header {
-  backdrop-filter: blur(12px);
-  background-color: rgba(255, 255, 255, 0.85) !important;
-  border-bottom: 1px solid #e5e7eb;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-  transition: all 0.3s ease;
+  background-color: #1f2937; /* dark gray */
+  color: white;
+  padding: 0.25rem 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-.header-toolbar {
-  display: flex !important;
-  justify-content: space-between !important;
-  align-items: center;
-  padding: 0 16px !important;
-}
-
-/* ---------------------------
-   Left: Logo
---------------------------- */
-.header-left .logo {
-  height: 120px;      /* increased from 50px */
-  width: 200px;      /* increased from 80px */
-  object-fit: contain;
-  transition: transform 0.3s ease;
-}
-
-.header-left .logo:hover {
-  transform: scale(1.2);
-}
-
-/* ---------------------------
-   Center Navigation
---------------------------- */
-.header-nav a {
-  margin: 0 16px;
-  font-size: 15px;
-  font-weight: 500;
-  text-decoration: none;
-  color: #4b5563;
-  position: relative;
-  transition: color 0.3s ease;
-}
-
-.header-nav a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -3px;
-  height: 2px;
-  width: 0;
-  background-color: #2563eb;
-  transition: width 0.3s ease;
-}
-
-.header-nav a:hover {
-  color: #2563eb;
-}
-
-.header-nav a:hover::after {
-  width: 100%;
-}
-
-/* ---------------------------
-   Right Section
---------------------------- */
-.header-right {
+/* Container */
+.header-container {
+  max-width: 400px;
+  margin: 0 auto;
   display: flex;
   align-items: center;
-  gap: 12px;
-}
-
-/* Search */
-.search-container {
+  justify-content: space-between;
   position: relative;
-  display: flex;
-  align-items: center;
-  transition: all 0.3s ease;
-  border-radius: 8px;
-  overflow: hidden;
-  background-color: #f3f4f6;
+  padding: 0 2rem;
 }
 
-.search-container:hover {
-  background-color: #e5e7eb;
-}
-
-.search-icon {
-  padding: 6px;
-  color: #9ca3af;
-}
-
-.search {
-  padding: 6px 12px;
-  font-size: 14px;
-  border: none;
-  outline: none;
-  width: 120px;
-  transition: width 0.3s ease;
-}
-
-.search:focus {
-  width: 200px;
-  background-color: #ffffff;
-}
-
-/* Icon buttons */
-.icon-button {
-  transition: transform 0.3s ease;
-}
-
-.icon-button:hover {
-  transform: scale(1.1);
-}
-
-/* Avatar */
-.avatar {
+.header-center .nav-item {
   cursor: pointer;
-  transition: transform 0.3s ease;
-}
-
-.avatar:hover {
-  transform: scale(1.1);
-}
-
-/* Hamburger Button */
-.hamburger {
-  font-size: 24px;
-  transition: transform 0.3s ease;
-}
-
-.hamburger:hover {
-  transform: scale(1.1);
-}
-
-/* ---------------------------
-   Mobile Nav
---------------------------- */
-.mobile-nav {
-  position: absolute;
-  top: 64px;
-  left: 0;
-  width: 100%;
-  background-color: #ffffff;
-  flex-direction: column;
-  display: flex;
-  padding: 12px 16px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  animation: slideDown 0.3s ease forwards;
-  z-index: 10;
-}
-
-.mobile-nav a {
-  margin: 8px 0;
-  color: #4b5563;
   font-weight: 500;
-  text-decoration: none;
-  transition: color 0.3s ease;
+  transition: color 0.2s ease;
 }
 
-.mobile-nav a:hover {
-  color: #2563eb;
+.header-center .nav-item:hover {
+  color: #facc15; /* yellow on hover */
 }
 
-/* ---------------------------
-   Animations
---------------------------- */
-@keyframes slideDown {
-  0% { opacity: 0; transform: translateY(-10px); }
-  100% { opacity: 1; transform: translateY(0); }
+.header-left .logo {
+  height: 200px;
+  width: 400px;
+  object-fit: contain;
 }
 
-@keyframes fadeIn {
-  0% { opacity: 0; transform: scale(0.95); }
-  100% { opacity: 1; transform: scale(1); }
+.header-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 2rem;
+}
+.header-right .user-name {
+  font-weight: 500;
+  cursor: default;
 }

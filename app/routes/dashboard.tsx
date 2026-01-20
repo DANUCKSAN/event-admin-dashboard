@@ -1,11 +1,11 @@
 import React from 'react'
+import EventCard from '~/components/EventCard'
 
 
 const dashboard = () => {
   return (
     <div>
-     
-      dashboard
+      <EventCard/>
     </div>
   )
 }
