@@ -86,3 +86,82 @@
   font-weight: 500;
   color: inherit;
 }
+
+
+/* Wrapper */
+.events-wrapper {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #f9fafb; /* light modern background */
+}
+
+/* Title */
+.events-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #1f2937;
+}
+
+/* Grid for 4 cards per row */
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+/* Event Card */
+.event-card {
+  background-color: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Image */
+.event-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+/* Info */
+.event-info {
+  padding: 1rem;
+}
+
+/* Title */
+.event-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 0.25rem;
+}
+
+/* Location */
+.event-location {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin-bottom: 0.5rem;
+}
+
+/* Description (truncate after 3 lines) */
+.event-description {
+  font-size: 0.875rem;
+  color: #4b5563;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+
