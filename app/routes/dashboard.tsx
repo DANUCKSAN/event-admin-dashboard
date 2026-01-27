@@ -1,6 +1,7 @@
 import React from 'react'
 import EventCard from '~/components/EventCard'
 import { PieChart } from '@mui/x-charts/PieChart';
+import Footer from '~/components/Footer';
 
 const data = [
             { id: 0, value: 10, label: 'series A' },
@@ -22,6 +23,7 @@ const dashboard = () => {
     
       
       <EventCard/>
+      <Footer/>
     </div>
   )
 }
